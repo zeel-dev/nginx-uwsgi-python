@@ -28,9 +28,6 @@ ENV NGINX_MAX_UPLOAD 0
 # will create a worker for each CPU core
 ENV NGINX_WORKER_PROCESSES 1
 
-# Install uWSGI
-# RUN pip install uwsgi
-
 # By default, run 2 processes
 ENV UWSGI_CHEAPER 2
 
