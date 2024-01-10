@@ -17,8 +17,9 @@ jobs:
       matrix:
         image:
           - name: latest
-            python_version: "3.9"
-            tags: '["latest", "3.9"]'
+            python_version: "3.12"
+            tags: '["latest", "3.12"]'
+            base: "alpine"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -32,6 +33,7 @@ jobs:
           NAME: ${{ matrix.image.name }}
           DOCKERFILE: ${{ matrix.image.dockerfile }}
           PYTHON_VERSION: ${{ matrix.image.python_version }}
+          SRC_DIR: ${{ matrix.image.base }}
           TAGS: ${{ matrix.image.tags }}
         run: ./.cicd/build-push.sh
 
