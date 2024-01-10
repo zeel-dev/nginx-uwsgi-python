@@ -6,15 +6,16 @@ LABEL maintainer="IT Support <itsupport@zeel.com>"
 RUN set -eux; \
 	\
 	apk add --no-cache --virtual .build-deps \
+        bash \
+	    build-base \
+        git \
+		gcc \
+		gnupg \
+		linux-headers \
 	    python3-dev \
 	    py3-pip \
-	    uwsgi-python3 \
 	    supervisor \
-	    build-base \
-		gnupg \
-		gcc \
-		linux-headers \
-        git \
+	    uwsgi-python3 \
 	; \
 	python3 --version \
 	pip --version
