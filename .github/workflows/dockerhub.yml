@@ -17,8 +17,8 @@ jobs:
       matrix:
         image:
           - name: latest
-            python_version: "3.12"
-            tags: '["latest", "3.12"]'
+            python_version: "3.11"
+            tags: '["latest", "3.11"]'
             base: "alpine"
     runs-on: ubuntu-latest
     steps:
