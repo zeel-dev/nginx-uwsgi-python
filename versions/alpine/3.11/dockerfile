@@ -1,7 +1,6 @@
-# START WITH PREPACKAGED NGINX BUILD IMAGE
 FROM nginx:mainline-alpine3.18-slim
 
-LABEL maintainer="Julian Raymar <julian.raymar@zeel.com>"
+LABEL maintainer="IT Support <itsupport@zeel.com>"
 
 # Add necessary alpine packages
 RUN set -eux; \
@@ -15,6 +14,7 @@ RUN set -eux; \
 		gnupg \
 		gcc \
 		linux-headers \
+        git \
 	; \
 	python3 --version \
 	pip --version
